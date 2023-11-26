@@ -14,10 +14,14 @@
     <script>
       fetch("https://fakestoreapi.com/products")
         .then((response) => response.json())
-        .then((json) => addCard(json));
+        .then((json) => filteredCard2(json));
 
-      function addCard(json) {
-        json.forEach((item) => {
+      function filteredCard2(json) {
+        const filterWomen = json.filter(function (item) {
+          return item.category == "women's clothing";
+        });
+        console.log(filterWomen);
+        filterWomen.forEach((item) => {
           const template = document
             .getElementById("card-template")
             .content.cloneNode(true);
@@ -36,8 +40,8 @@
       <div class="dropdown">
         <button onclick="dropDown()" class="dropbtn">Categories</button>
         <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">Home</a>
           <a href="men.html">Men's Clothing</a>
-          <a href="women.html">Women's Clothing</a>
           <a href="jewelery.html">Jewelery</a>
           <a href="electronics.html">Electronics</a>
         </div>
