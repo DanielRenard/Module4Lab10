@@ -10,8 +10,21 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header id="header">Online Store</header>
+    <div class="navbar">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Categories</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="men.html">Men's Clothing</a>
+              <a href="#">Women's Clothing</a>
+              <a href="#">Jewelery</a>
+              <a href="#">Electronics</a>
+            </div>
+          </div>
+      </div>
     <template id="card-template">
       <div
         class="col-lg-3 col-md-6 col-sm-12"
@@ -22,7 +35,7 @@
             <h5 class="card-title">Hey</h5>
             <img class="card-img" src="" alt="Image" width="200" />
             <p class="card-price">Undefined</p>
-            <p class="card-text">This content is a little bit longer.</p>
+            <p class="card-text">Description not available</p>
           </div>
         </div>
       </div>
