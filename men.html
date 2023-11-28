@@ -14,11 +14,11 @@
     <script>
       fetch("https://fakestoreapi.com/products")
         .then((response) => response.json())
-        .then((json) => filteredCard(json));
+        .then((json) => filteredCard(json, currentCategory));
 
-      function filteredCard(json) {
+      function filteredCard(json, category) {
         const filterMen = json.filter(function (item) {
-          return item.category == "men's clothing";
+          return item.category === category;
         });
         console.log(filterMen);
         filterMen.forEach((item) => {
@@ -32,6 +32,11 @@
           document.querySelector("#card-list").appendChild(template);
         });
       }
+
+      function productCategories(json) {
+        console.log(item.category)
+      }
+
     </script>
   </head>
   <body>
@@ -68,6 +73,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>

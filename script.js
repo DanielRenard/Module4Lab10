@@ -2,6 +2,7 @@
 toggle between hiding and showing the dropdown content */
 function dropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
+  const currentCategory = "men's clothing"
 }
 
 // Close the dropdown menu if the user clicks outside of it
